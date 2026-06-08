@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEELAM Store - Brand Offers</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0d1117;color:#fff}
+header{text-align:center;padding:30px 15px;background:#000}
+.logo{width:140px;border-radius:10px}
+h1{color:#d4af37;margin-top:15px}
+.store-info{margin-top:10px;line-height:1.7}
+.search-box{text-align:center;padding:20px}
+.search-box input{width:90%;max-width:500px;padding:12px;border:none;border-radius:8px;font-size:16px}
+.container{max-width:1200px;margin:auto;padding:20px}
+.offer-card{background:#161b22;border:1px solid #d4af37;border-radius:15px;margin-bottom:30px;overflow:hidden}
+.offer-card img{width:100%;display:block}
+.offer-content{padding:20px}
+.brand{color:#d4af37;font-size:28px;margin-bottom:10px}
+.offer-title{font-size:22px;margin-bottom:10px}
+.offer-desc{color:#ddd;line-height:1.7}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;text-decoration:none;padding:14px 18px;border-radius:50px;font-weight:bold}
+footer{text-align:center;padding:25px;background:#000;color:#aaa}
+</style>
+</head>
+<body>
+<header>
+<img src="logo.png" class="logo" alt="NEELAM Logo">
+<h1>NEELAM</h1>
+<div class="store-info">
+Sadar Road, Forbesganj<br>
+Dist - Araria, Bihar - 854318<br>
+Mobile: 9142047599
+</div>
+</header>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search Brand..." onkeyup="searchBrand()">
+</div>
+
+<div class="container">
+<div class="offer-card brand-card">
+<img src="offers/pepe.jpg" alt="Pepe Jeans Offer">
+<div class="offer-content">
+<div class="brand">PEPE JEANS</div>
+<div class="offer-title">Buy 2 Get 1 Free</div>
+<div class="offer-desc">
+Buy any 2 products and get 1 product free.<br><br>
+Also get 20% OFF on purchase of 1 item.<br><br>
+Terms & Conditions Apply.
+</div>
+</div>
+</div>
+
+<div class="offer-card brand-card">
+<img src="offers/killer.jpg" alt="Killer Offer">
+<div class="offer-content">
+<div class="brand">KILLER</div>
+<div class="offer-title">Buy 2 Get 2 Free</div>
+<div class="offer-desc">
+Buy 2 products and get 2 free.<br><br>
+30% OFF on purchase of 2 products.<br><br>
+20% OFF on purchase of 1 product.<br><br>
+Terms & Conditions Apply.
+</div>
+</div>
+</div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/919142047599" target="_blank">WhatsApp</a>
+
+<footer>© 2026 NEELAM Store | All Rights Reserved</footer>
+
+<script>
+function searchBrand(){
+let input=document.getElementById("searchInput").value.toUpperCase();
+let cards=document.getElementsByClassName("brand-card");
+for(let i=0;i<cards.length;i++){
+let brand=cards[i].querySelector(".brand").innerText.toUpperCase();
+cards[i].style.display=brand.indexOf(input)>-1?"":"none";
+}
+}
+</script>
+</body>
+</html>
